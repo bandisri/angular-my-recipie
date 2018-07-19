@@ -7,11 +7,11 @@ class Item {
 }
 
 @Component({
-  selector: '<shop-list>',
+  selector: 'app-shoplist',
   templateUrl: './shoplist.component.html'
 })
 
-export class ShopList implements OnInit {
+export class ShopListComponent implements OnInit {
 
   public items: Item[] = [];
   public itemName: string = '';
