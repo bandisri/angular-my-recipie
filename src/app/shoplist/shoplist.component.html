@@ -1,19 +1,12 @@
-<div>
-  <label for="itemName">Name</label>
-  <input type="text" name="itemName" [(ngModel)]="itemName" />
-
-  <label for="itemQuantity">Amount</label>
-  <input type="number" name="itemQuantity" [(ngModel)]="itemQuantity" />
-
-  <button type="button" name="add" (click)="onAdd()">Add</button>
-  <button type="button" name="clear" (click)="onClear()">Clear</button>
+<div class="row">
+  <div class="col-xs-10">
+    <app-shopedit>Loading Shopping Edit Component...</app-shopedit>
+    <hr />
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action"
+        *ngFor="let ingredient of ingredients">
+        {{ingredient.name}} ({{ingredient.amount}})
+     </a>
+    </div>
+  </div>
 </div>
-
-
-<div>
-  <ul *ngFor="let item of items">
-    <li>{{item.name}}({{item.amount}})</li>
-  </ul>
-</div>
-
-<app-shopedit>Loading App Shopping Edit..</app-shopedit>

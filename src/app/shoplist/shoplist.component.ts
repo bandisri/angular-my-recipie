@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 
-class Item {
-  name: string;
-  amount: number;
-}
+import { Ingredient } from '../shared/ingredients.model';
+
+// class Item {
+//   name: string;
+//   amount: number;
+// }
 
 @Component({
   selector: 'app-shoplist',
@@ -13,24 +15,24 @@ class Item {
 
 export class ShopListComponent implements OnInit {
 
-  public items: Item[] = [];
-  public itemName: string = '';
-  public itemQuantity = 0;
+  public ingredients: Ingredient[] = [];
+  // public itemName: string = '';
+  // public itemQuantity = 0;
 
   ngOnInit() {
-    this.items.push({name: 'Apples', amount:10});
-    this.items.push({name: 'Tomatoes', amount:10});
-    this.items.push({name: 'Meat', amount:1});
-    this.items.push({name: 'French Fries', amount:20});
+    this.ingredients.push(new Ingredient('Apples', 10));
+    this.ingredients.push(new Ingredient('Tomatoes', 10));
+    this.ingredients.push(new Ingredient('Meat', 1));
+    this.ingredients.push(new Ingredient('French Fries', 20));
   }
 
-  onAdd() {
-    this.items.push({name: this.itemName, amount: this.itemQuantity});
-  }
-
-  onClear() {
-    this.itemName = '';
-    this.itemQuantity = 0;
-  }
+  // onAdd() {
+  //   this.ingredients.push(new Ingredient(this.itemName, this.itemQuantity));
+  // }
+  //
+  // onClear() {
+  //   this.itemName = '';
+  //   this.itemQuantity = 0;
+  // }
 
 }
